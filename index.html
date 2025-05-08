@@ -5,185 +5,167 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV Vũ Ngọc Công</title>
   <style>
-    /* Google Font */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
-    /* Root Variables */
-    :root {
-      --primary-color: #1e3a8a;
-      --secondary-color: #f3f4f6;
-      --accent-color: #2563eb;
-      --text-color: #111827;
-      --light-text: #4b5563;
-      --bg-light: #ffffff;
-      --border-radius: 12px;
-      --padding: 20px;
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
     }
-
-    /* Reset & Base */n    
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: var(--secondary-color); color: var(--text-color); }
-
-    /* Container */
-    .container { max-width: 900px; margin: 40px auto; background: var(--bg-light); border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-
-    /* Header */
-    .header { background: var(--primary-color); color: #fff; padding: var(--padding); text-align: center; }
-    .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    .header p { font-size: 1rem; color: rgba(255,255,255,0.8); }
-
-    /* Grid Layout */
-    .grid { display: grid; grid-template-columns: 1fr 2fr; }
-    .sidebar { background: var(--primary-color); color: #fff; padding: var(--padding); }
-    .main { padding: var(--padding); }
-
-    /* Sidebar Links */
-    .contact-list { list-style: none; margin-top: 20px; }
-    .contact-list li { display: flex; align-items: center; margin-bottom: 12px; font-size: 0.95rem; }
-    .contact-list span.icon { margin-right: 8px; font-size: 1.2rem; }
-
-    /* Section Styling */
-    .section { margin-bottom: 32px; }
-    .section h2 { font-size: 1.5rem; color: var(--accent-color); margin-bottom: 16px; position: relative; padding-bottom: 8px; }
-    .section h2::after { content: ''; width: 50px; height: 4px; background: var(--accent-color); position: absolute; bottom: 0; left: 0; border-radius: 2px; }
-
-    .text-secondary { color: var(--light-text); }
-
-    /* Lists & Items */
-    .experience-item, .education-item { margin-bottom: 24px; }
-    .experience-item h3, .education-item h3 { font-size: 1.1rem; margin-bottom: 4px; font-weight: 600; }
-    .experience-item span.date, .education-item span.date { font-size: 0.9rem; color: var(--light-text); }
-    .experience-item ul { list-style: disc; margin-left: 20px; margin-top: 8px; }
-
-    /* Skills Grid */
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px; }
-    .skill { background: var(--secondary-color); padding: 8px 12px; border-radius: var(--border-radius); text-align: center; font-size: 0.9rem; }
-
-    /* Projects Gallery */
-    .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .project-card { background: var(--secondary-color); border-radius: var(--border-radius); overflow: hidden; }
-    .project-card img { width: 100%; height: auto; display: block; }
-    .project-card p { padding: 12px; font-size: 0.9rem; }
-
-    /* Footer */
-    .footer { text-align: center; padding: 16px; font-size: 0.8rem; color: var(--light-text); }
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .contact {
+      margin-top: 5px;
+      font-size: 0.9em;
+      color: #555;
+    }
+    section {
+      margin-bottom: 20px;
+    }
+    h2 {
+      border-bottom: 2px solid #0073e6;
+      padding-bottom: 5px;
+      color: #0073e6;
+      margin-bottom: 10px;
+    }
+    .experience .item {
+      margin-bottom: 15px;
+    }
+    .item h3 {
+      margin: 0;
+      font-size: 1.1em;
+      color: #333;
+    }
+    .item .date {
+      font-style: italic;
+      color: #777;
+      font-size: 0.9em;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5em;
+      }
+      .container {
+        padding: 15px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Header -->
-    <div class="header">
-      <h1>Vũ Ngọc Công</h1>
-      <p class="text-secondary">Digital Marketing Specialist & Brand Designer</p>
-    </div>
-
-    <!-- Content Grid -->
-    <div class="grid">
-
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <ul class="contact-list">
-          <li><span class="icon">📞</span>0772 442 230</li>
-          <li><span class="icon">✉️</span>congvu570@gmail.com</li>
-          <li><span class="icon">🏠</span>Buôn Ma Thuột, Đắk Lắk</li>
+    <header>
+      <h1>VŨ NGỌC CÔNG</h1>
+      <p class="contact">📞 0772 442 230 | 📧 congvu570@gmail.com</p>
+      <p class="contact">🏠 Buôn Ma Thuột, Đắk Lắk</p>
+    </header>
+    
+    <section class="summary">
+      <h2>Tóm tắt hồ sơ</h2>
+      <p>Chuyên viên Digital Marketing trẻ, năng động với kinh nghiệm đa dạng từ media, social đến tổ chức sự kiện. Thành thạo quản lý kênh mạng xã hội, sản xuất nội dung và phân tích dữ liệu. Có kỹ năng sử dụng AI để tối ưu content, nâng cao hiệu quả chiến dịch. Luôn chủ động học hỏi, sẵn sàng đóng góp sáng tạo để mang lại giá trị cho doanh nghiệp.</p>
+    </section>
+    
+    <section class="objective">
+      <h2>Mục tiêu nghề nghiệp</h2>
+      <p>Phát triển sự nghiệp trong lĩnh vực Digital Marketing, nâng cao kỹ năng truyền thông đa kênh, sáng tạo nội dung và phân tích dữ liệu, đồng thời đóng góp vào sự tăng trưởng của doanh nghiệp.</p>
+    </section>
+    
+    <section class="experience">
+      <h2>Kinh nghiệm làm việc</h2>
+      <div class="item">
+        <h3>Nhân viên Media - Bye Béo</h3>
+        <p class="date">07/2024 – 05/2025</p>
+        <ul>
+          <li>Lên ý tưởng, sản xuất nội dung video, hình ảnh.</li>
+          <li>Quản lý kênh mạng xã hội, theo dõi hiệu quả chiến dịch.</li>
+          <li>Phối hợp team Marketing triển khai quảng cáo online.</li>
         </ul>
-
-        <div class="section">
-          <h2>Kỹ năng</h2>
-          <div class="skills-grid">
-            <div class="skill">Digital Strategy</div>
-            <div class="skill">Social Media</div>
-            <div class="skill">Content & AI</div>
-            <div class="skill">Brand Identity</div>
-            <div class="skill">Video Production</div>
-            <div class="skill">Logo Design</div>
-            <div class="skill">Photoshop</div>
-            <div class="skill">Canva</div>
-            <div class="skill">Google Ads</div>
-            <div class="skill">Facebook Ads</div>
-          </div>
-        </div>
-
-        <div class="section">
-          <h2>Học vấn</h2>
-          <div class="education-item">
-            <h3>CĐ FPT Tây Nguyên</h3>
-            <span class="date">2019 – Ứng dụng phần mềm</span>
-          </div>
-          <div class="education-item">
-            <h3>CĐ FPT Tây Nguyên</h3>
-            <span class="date">2022 – Thiết kế đồ họa</span>
-          </div>
-        </div>
-
-        <div class="section">
-          <h2>Giải thưởng</h2>
-          <ul class="awards">
-            <li>Giải nhì ấn phẩm truyền thông – FPT Polytechnic Tây Nguyên (2021)</li>
-            <li>Giải nhì thiết kế logo kỷ niệm 15 năm – Đại học FPT (2021)</li>
-          </ul>
-        </div>
-      </aside>
-
-      <!-- Main -->
-      <main class="main">
-        <div class="section">
-          <h2>Tóm tắt hồ sơ</h2>
-          <p class="text-secondary">Chuyên viên Digital Marketing trẻ, năng động với hơn 5 năm kinh nghiệm từ media, social đến tổ chức sự kiện. Thành thạo quản lý kênh, sản xuất nội dung và phân tích dữ liệu. Áp dụng AI để tối ưu chiến dịch và đạt KPI xuất sắc.</p>
-        </div>
-
-        <div class="section">
-          <h2>Kinh nghiệm</h2>
-          <div class="experience-item">
-            <h3>Nhân viên Media – Bye Béo</h3>
-            <span class="date">07/2024 – 05/2025</span>
-            <ul>
-              <li>Phát triển & sản xuất video, ảnh</li>
-              <li>Quản lý social & báo cáo hiệu quả</li>
-              <li>Triển khai Facebook & Google Ads</li>
-            </ul>
-          </div>
-          <div class="experience-item">
-            <h3>Nhân viên Dự án Khai trương – TDH Boxing Fitness Club</h3>
-            <span class="date">04/2025 – 05/2025</span>
-            <ul>
-              <li>Truyền thông sự kiện khai trương</li>
-              <li>Sản xuất & phân phối nội dung đa kênh</li>
-              <li>Đánh giá & báo cáo kết quả</li>
-            </ul>
-          </div>
-          <div class="experience-item">
-            <h3>Nhân viên Truyền thông – Bệnh viện Mắt Tây Nguyên</h3>
-            <span class="date">2023 – 2024</span>
-            <ul>
-              <li>Truyền thông online/offline & tổ chức event</li>
-              <li>Quản lý fanpage & nội dung mạng xã hội</li>
-              <li>Phân tích data & báo cáo chiến dịch</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="section">
-          <h2>Dự án tiêu biểu</h2>
-          <div class="projects">
-            <div class="project-card">
-              <img src="illustration1.jpg" alt="Logo dự án X">
-              <p>Logo & nhận diện dự án X</p>
-            </div>
-            <div class="project-card">
-              <img src="illustration2.jpg" alt="Video TDH Boxing">
-              <p>Video marketing TDH Boxing Fitness</p>
-            </div>
-          </div>
-        </div>
-      </main>
-
-    </div>
-
-    <div class="footer">
-      Designed by Vũ Ngọc Công • © 2025
-    </div>
-
+      </div>
+      <div class="item">
+        <h3>Nhân viên dự án khai trương - TDH Boxing Fitness Club</h3>
+        <p class="date">04/2025 – 05/2025</p>
+        <ul>
+          <li>Hỗ trợ truyền thông, quảng bá sự kiện khai trương.</li>
+          <li>Sản xuất, phân phối nội dung marketing đa kênh.</li>
+          <li>Đo lường, báo cáo hiệu quả truyền thông.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <h3>Nhân viên truyền thông - Bệnh viện Mắt Tây Nguyên</h3>
+        <p class="date">2023 – 2024</p>
+        <ul>
+          <li>Lên kế hoạch truyền thông online, offline.</li>
+          <li>Quản lý fanpage, nội dung mạng xã hội.</li>
+          <li>Tổ chức sự kiện nội bộ, chương trình khuyến mại.</li>
+          <li>Theo dõi dữ liệu, báo cáo hiệu quả chiến dịch.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <h3>Nhân viên truyền thông online & offline - COMBE</h3>
+        <p class="date">2021 – 2022</p>
+      </div>
+      <div class="item">
+        <h3>Nhân viên thiết kế 2D, 3D - Media 47</h3>
+        <p class="date">2021 – 2022</p>
+      </div>
+      <div class="item">
+        <h3>Nhân viên truyền thông online (Part-time) - Cao Nguyên Tech</h3>
+        <p class="date">2019 – Nay</p>
+        <ul>
+          <li>Viết bài, thiết kế hình ảnh, sản xuất nội dung truyền thông.</li>
+          <li>Quản lý các kênh mạng xã hội của công ty.</li>
+          <li>Theo dõi, báo cáo kết quả hoạt động truyền thông.</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="skills">
+      <h2>Kỹ năng</h2>
+      <ul>
+        <li>Lên kế hoạch, triển khai chiến dịch Digital Marketing.</li>
+        <li>Sáng tạo nội dung đa kênh (bài viết, hình ảnh, video).</li>
+        <li>Quản lý, phát triển tài khoản mạng xã hội.</li>
+        <li>Sử dụng tốt AI để phát triển nội dung.</li>
+        <li>Theo dõi, phân tích, báo cáo dữ liệu marketing.</li>
+        <li>Làm việc nhóm, phối hợp đa phòng ban.</li>
+        <li>Sử dụng cơ bản Photoshop, Canva.</li>
+        <li>Hiểu biết cơ bản Facebook Ads, Google Ads.</li>
+      </ul>
+    </section>
+    
+    <section class="education">
+      <h2>Học vấn</h2>
+      <ul>
+        <li>2019: Cao đẳng FPT Tây Nguyên – Ứng dụng phần mềm</li>
+        <li>2022: Cao đẳng FPT Tây Nguyên – Thiết kế đồ họa</li>
+      </ul>
+    </section>
+    
+    <section class="awards">
+      <h2>Giải thưởng</h2>
+      <ul>
+        <li>Giải nhì ấn phẩm truyền thông – FPT Polytechnic Tây Nguyên (2021)</li>
+        <li>Giải nhì thiết kế logo kỷ niệm 15 năm – Đại học FPT (2021)</li>
+      </ul>
+    </section>
   </div>
 </body>
 </html>
