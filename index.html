@@ -5,156 +5,185 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV Vũ Ngọc Công</title>
   <style>
-    /* Font & Reset */
+    /* Google Font */
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: #eef2f7; color: #2d2d2d; }
 
-    /* Container & Page */
-    .container { width: 800px; margin: 20px auto; background: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    .page { display: grid; grid-template-columns: 1fr 2fr; min-height: 1120px; padding: 40px; }
-    .page + .page { border-top: 1px solid #ddd; }
+    /* Root Variables */
+    :root {
+      --primary-color: #1e3a8a;
+      --secondary-color: #f3f4f6;
+      --accent-color: #2563eb;
+      --text-color: #111827;
+      --light-text: #4b5563;
+      --bg-light: #ffffff;
+      --border-radius: 12px;
+      --padding: 20px;
+    }
 
-    /* Sidebar */
-    .sidebar { background: #0d47a1; color: #fff; padding: 30px; display: flex; flex-direction: column; }
-    .sidebar h2 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
-    .sidebar span.subtitle { font-weight: 300; margin-bottom: 20px; }
-    .sidebar ul { list-style: none; margin-top: 20px; }
-    .sidebar ul li { display: flex; align-items: center; margin-bottom: 12px; font-size: 0.95rem; }
-    .sidebar ul li span.icon { margin-right: 8px; font-size: 1.1rem; }
+    /* Reset & Base */n    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: var(--secondary-color); color: var(--text-color); }
 
-    /* Main content */
-    .main { padding-left: 40px; }
-    .section { margin-bottom: 30px; }
-    .section h3 { font-size: 1.4rem; font-weight: 600; color: #0d47a1; text-transform: uppercase; border-bottom: 2px solid #0d47a1; display: inline-block; margin-bottom: 16px; }
-    .section p { margin-bottom: 16px; }
-    .experience, .education, .awards { list-style: none; }
-    .experience .item, .education .item, .awards .item { margin-bottom: 20px; }
-    .item .title { font-size: 1rem; font-weight: 600; }
-    .item .meta { font-size: 0.9rem; color: #555; margin-bottom: 8px; }
-    .item ul { list-style: disc; margin-left: 20px; }
+    /* Container */
+    .container { max-width: 900px; margin: 40px auto; background: var(--bg-light); border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
 
-    /* Illustration grid */
-    .illustration-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .illustration-grid div { text-align: center; }
-    .illustration-grid img { width: 100%; border-radius: 8px; margin-bottom: 8px; }
+    /* Header */
+    .header { background: var(--primary-color); color: #fff; padding: var(--padding); text-align: center; }
+    .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .header p { font-size: 1rem; color: rgba(255,255,255,0.8); }
+
+    /* Grid Layout */
+    .grid { display: grid; grid-template-columns: 1fr 2fr; }
+    .sidebar { background: var(--primary-color); color: #fff; padding: var(--padding); }
+    .main { padding: var(--padding); }
+
+    /* Sidebar Links */
+    .contact-list { list-style: none; margin-top: 20px; }
+    .contact-list li { display: flex; align-items: center; margin-bottom: 12px; font-size: 0.95rem; }
+    .contact-list span.icon { margin-right: 8px; font-size: 1.2rem; }
+
+    /* Section Styling */
+    .section { margin-bottom: 32px; }
+    .section h2 { font-size: 1.5rem; color: var(--accent-color); margin-bottom: 16px; position: relative; padding-bottom: 8px; }
+    .section h2::after { content: ''; width: 50px; height: 4px; background: var(--accent-color); position: absolute; bottom: 0; left: 0; border-radius: 2px; }
+
+    .text-secondary { color: var(--light-text); }
+
+    /* Lists & Items */
+    .experience-item, .education-item { margin-bottom: 24px; }
+    .experience-item h3, .education-item h3 { font-size: 1.1rem; margin-bottom: 4px; font-weight: 600; }
+    .experience-item span.date, .education-item span.date { font-size: 0.9rem; color: var(--light-text); }
+    .experience-item ul { list-style: disc; margin-left: 20px; margin-top: 8px; }
+
+    /* Skills Grid */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px; }
+    .skill { background: var(--secondary-color); padding: 8px 12px; border-radius: var(--border-radius); text-align: center; font-size: 0.9rem; }
+
+    /* Projects Gallery */
+    .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .project-card { background: var(--secondary-color); border-radius: var(--border-radius); overflow: hidden; }
+    .project-card img { width: 100%; height: auto; display: block; }
+    .project-card p { padding: 12px; font-size: 0.9rem; }
+
+    /* Footer */
+    .footer { text-align: center; padding: 16px; font-size: 0.8rem; color: var(--light-text); }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>Vũ Ngọc Công</h1>
+      <p class="text-secondary">Digital Marketing Specialist & Brand Designer</p>
+    </div>
 
-    <!-- Trang 1 -->
-    <div class="page">
+    <!-- Content Grid -->
+    <div class="grid">
+
+      <!-- Sidebar -->
       <aside class="sidebar">
-        <h2>Vũ Ngọc Công</h2>
-        <span class="subtitle">Digital Marketing Specialist</span>
-        <ul>
+        <ul class="contact-list">
           <li><span class="icon">📞</span>0772 442 230</li>
           <li><span class="icon">✉️</span>congvu570@gmail.com</li>
           <li><span class="icon">🏠</span>Buôn Ma Thuột, Đắk Lắk</li>
         </ul>
-      </aside>
-      <div class="main">
-        <section class="section">
-          <h3>Tóm tắt hồ sơ</h3>
-          <p>Chuyên viên Digital Marketing năng động, với hơn 5 năm kinh nghiệm trong media, social, và tổ chức sự kiện. Thành thạo quản lý kênh mạng xã hội, sản xuất nội dung đa dạng và phân tích dữ liệu. Sử dụng AI để tối ưu hoá chiến dịch, mang lại kết quả vượt trội.</p>
-        </section>
-        <section class="section">
-          <h3>Kinh nghiệm làm việc</h3>
-          <ul class="experience">
-            <li class="item">
-              <div class="title">Nhân viên Media – Bye Béo</div>
-              <div class="meta">07/2024 – 05/2025</div>
-              <ul>
-                <li>Ý tưởng & sản xuất video, hình ảnh</li>
-                <li>Quản lý mạng xã hội, báo cáo hiệu quả</li>
-                <li>Triển khai quảng cáo online</li>
-              </ul>
-            </li>
-            <li class="item">
-              <div class="title">Nhân viên Dự án Khai trương – TDH Boxing Fitness Club</div>
-              <div class="meta">04/2025 – 05/2025</div>
-              <ul>
-                <li>Truyền thông & quảng bá sự kiện</li>
-                <li>Sản xuất & phân phối nội dung đa kênh</li>
-                <li>Đo lường & báo cáo kết quả</li>
-              </ul>
-            </li>
-            <li class="item">
-              <div class="title">Nhân viên Truyền thông – Bệnh viện Mắt Tây Nguyên</div>
-              <div class="meta">2023 – 2024</div>
-              <ul>
-                <li>Truyền thông online/offline & tổ chức sự kiện</li>
-                <li>Quản lý fanpage & nội dung mạng xã hội</li>
-                <li>Phân tích dữ liệu & báo cáo chiến dịch</li>
-              </ul>
-            </li>
-            <!-- Rút gọn những mục còn lại cho ngắn gọn -->
-            <li class="item">
-              <div class="title">Nhân viên Truyền thông – COMBE | Media 47 | Cao Nguyên Tech</div>
-              <div class="meta">2019 – 2022</div>
-              <ul>
-                <li>Thiết kế đồ hoạ 2D/3D, sản xuất nội dung</li>
-                <li>Quản lý kênh & báo cáo hiệu quả</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-      </div>
-    </div>
 
-    <!-- Trang 2 -->
-    <div class="page">
-      <aside class="sidebar">
-        <section class="section">
-          <h3>Kỹ năng</h3>
-          <ul>
-            <li>Digital Marketing Strategy</li>
-            <li>Social Media Management</li>
-            <li>Content Creation & AI Optimization</li>
-            <li>Brand Identity & Logo Design</li>
-            <li>Video Production & Photography</li>
-            <li>Photoshop, Canva</li>
-            <li>Facebook & Google Ads</li>
-          </ul>
-        </section>
-        <section class="section">
-          <h3>Học vấn</h3>
-          <ul class="education">
-            <li class="item">
-              <div class="title">CĐ FPT Tây Nguyên – Ứng dụng phần mềm</div>
-              <div class="meta" color: #fff>2019</div>
-            </li>
-            <li class="item">
-              <div class="title">CĐ FPT Tây Nguyên – Thiết kế đồ họa</div>
-              <div class="meta" color: #fff>2022</div>
-            </li>
-          </ul>
-        </section>
-        <section class="section">
-          <h3>Giải thưởng</h3>
+        <div class="section">
+          <h2>Kỹ năng</h2>
+          <div class="skills-grid">
+            <div class="skill">Digital Strategy</div>
+            <div class="skill">Social Media</div>
+            <div class="skill">Content & AI</div>
+            <div class="skill">Brand Identity</div>
+            <div class="skill">Video Production</div>
+            <div class="skill">Logo Design</div>
+            <div class="skill">Photoshop</div>
+            <div class="skill">Canva</div>
+            <div class="skill">Google Ads</div>
+            <div class="skill">Facebook Ads</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Học vấn</h2>
+          <div class="education-item">
+            <h3>CĐ FPT Tây Nguyên</h3>
+            <span class="date">2019 – Ứng dụng phần mềm</span>
+          </div>
+          <div class="education-item">
+            <h3>CĐ FPT Tây Nguyên</h3>
+            <span class="date">2022 – Thiết kế đồ họa</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Giải thưởng</h2>
           <ul class="awards">
-            <li class="item">Giải nhì ấn phẩm truyền thông – FPT Polytechnic Tây Nguyên (2021)</li>
-            <li class="item">Giải nhì thiết kế logo 15 năm – Đại học FPT (2021)</li>
+            <li>Giải nhì ấn phẩm truyền thông – FPT Polytechnic Tây Nguyên (2021)</li>
+            <li>Giải nhì thiết kế logo kỷ niệm 15 năm – Đại học FPT (2021)</li>
           </ul>
-        </section>
+        </div>
       </aside>
-      <div class="main">
-        <section class="section">
-          <h3>Dự án tiêu biểu</h3>
-          <div class="illustration-grid">
-            <div>
-              <img src="illustration1.jpg" alt="Logo & nhân diện">
-              <p>Logo & nhận diện thương hiệu dự án X</p>
+
+      <!-- Main -->
+      <main class="main">
+        <div class="section">
+          <h2>Tóm tắt hồ sơ</h2>
+          <p class="text-secondary">Chuyên viên Digital Marketing trẻ, năng động với hơn 5 năm kinh nghiệm từ media, social đến tổ chức sự kiện. Thành thạo quản lý kênh, sản xuất nội dung và phân tích dữ liệu. Áp dụng AI để tối ưu chiến dịch và đạt KPI xuất sắc.</p>
+        </div>
+
+        <div class="section">
+          <h2>Kinh nghiệm</h2>
+          <div class="experience-item">
+            <h3>Nhân viên Media – Bye Béo</h3>
+            <span class="date">07/2024 – 05/2025</span>
+            <ul>
+              <li>Phát triển & sản xuất video, ảnh</li>
+              <li>Quản lý social & báo cáo hiệu quả</li>
+              <li>Triển khai Facebook & Google Ads</li>
+            </ul>
+          </div>
+          <div class="experience-item">
+            <h3>Nhân viên Dự án Khai trương – TDH Boxing Fitness Club</h3>
+            <span class="date">04/2025 – 05/2025</span>
+            <ul>
+              <li>Truyền thông sự kiện khai trương</li>
+              <li>Sản xuất & phân phối nội dung đa kênh</li>
+              <li>Đánh giá & báo cáo kết quả</li>
+            </ul>
+          </div>
+          <div class="experience-item">
+            <h3>Nhân viên Truyền thông – Bệnh viện Mắt Tây Nguyên</h3>
+            <span class="date">2023 – 2024</span>
+            <ul>
+              <li>Truyền thông online/offline & tổ chức event</li>
+              <li>Quản lý fanpage & nội dung mạng xã hội</li>
+              <li>Phân tích data & báo cáo chiến dịch</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Dự án tiêu biểu</h2>
+          <div class="projects">
+            <div class="project-card">
+              <img src="illustration1.jpg" alt="Logo dự án X">
+              <p>Logo & nhận diện dự án X</p>
             </div>
-            <div>
-              <img src="illustration2.jpg" alt="Chiến dịch video">
-              <p>Video marketing cho TDH Boxing Fitness</p>
+            <div class="project-card">
+              <img src="illustration2.jpg" alt="Video TDH Boxing">
+              <p>Video marketing TDH Boxing Fitness</p>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </main>
+
     </div>
+
+    <div class="footer">
+      Designed by Vũ Ngọc Công • © 2025
+    </div>
+
   </div>
 </body>
 </html>
