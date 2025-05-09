@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV Vũ Ngọc Công</title>
-  <!-- Import Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -12,14 +11,10 @@
       --accent-color: #e74c3c;
       --heading-font: 'Playfair Display', serif;
       --body-font: 'Montserrat', sans-serif;
-      --base-spacing: 1.4;
+      --base-spacing: 1.6;
       --section-gap: 2.5rem;
     }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: var(--body-font);
       line-height: var(--base-spacing);
@@ -28,27 +23,43 @@
       padding: 2rem;
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       background: #fff;
-      padding: 3rem 2rem;
+      padding: 3rem;
       box-shadow: 0 8px 16px rgba(0,0,0,0.1);
       border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
     }
     header {
       text-align: center;
       margin-bottom: var(--section-gap);
     }
+    header img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 4px solid var(--accent-color);
+      transition: transform 0.3s;
+    }
+    header img:hover {
+      transform: scale(1.1);
+    }
     h1 {
       font-family: var(--heading-font);
-      font-size: 2.8rem;
+      font-size: 3rem;
       font-weight: 700;
-      letter-spacing: 1px;
       color: var(--accent-color);
       margin-bottom: 0.5rem;
     }
     .contact {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: #555;
       letter-spacing: 0.5px;
     }
@@ -57,187 +68,71 @@
     }
     h2 {
       font-family: var(--heading-font);
-      font-size: 1.8rem;
-      font-weight: 700;
+      font-size: 2rem;
       color: var(--primary-color);
       margin-bottom: 1rem;
       border-left: 4px solid var(--accent-color);
-      padding-left: 0.5rem;
-      letter-spacing: 0.5px;
+      padding-left: 0.7rem;
     }
     p, ul {
       margin-bottom: 1rem;
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
     ul {
       padding-left: 1.2rem;
       list-style-type: disc;
     }
-    .experience .item,
-    .projects .item {
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #c0392b;
+    }
+    .experience .item {
       margin-bottom: 1.8rem;
     }
     .item h3 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 600;
       color: var(--accent-color);
       margin-bottom: 0.3rem;
-      letter-spacing: 0.5px;
     }
     .item .date {
       font-style: italic;
       color: #777;
-      font-size: 0.9rem;
-      margin-bottom: 0.6rem;
-    }
-    a {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px dotted var(--accent-color);
-    }
-    a:hover {
-      text-decoration: underline;
+      font-size: 0.95rem;
     }
     @media (max-width: 600px) {
       body { padding: 1rem; }
       .container { padding: 2rem 1rem; }
-      h1 { font-size: 2rem; }
-      h2 { font-size: 1.5rem; }
+      h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.6rem; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
+      <img src="/mnt/data/ec1498643c34b479a44ca3cea7fc6f80.jpg" alt="Vũ Ngọc Công">
       <h1>VŨ NGỌC CÔNG</h1>
       <p class="contact">📞 0772 442 230 | 📧 congvu570@gmail.com</p>
       <p class="contact">🏠 Buôn Ma Thuột, Đắk Lắk</p>
     </header>
-    
-    <section class="summary">
-      <h2>Tóm tắt hồ sơ</h2>
-      <p>Chuyên viên Digital Marketing trẻ, năng động với kinh nghiệm đa dạng từ media, social đến tổ chức sự kiện. Thành thạo quản lý kênh mạng xã hội, sản xuất nội dung và phân tích dữ liệu. Có kỹ năng sử dụng AI để tối ưu content, nâng cao hiệu quả chiến dịch. Luôn chủ động học hỏi, sẵn sàng đóng góp sáng tạo để mang lại giá trị cho doanh nghiệp.</p>
-    </section>
-    
-    <section class="objective">
-      <h2>Mục tiêu nghề nghiệp</h2>
-      <p>Phát triển sự nghiệp trong lĩnh vực Digital Marketing, nâng cao kỹ năng truyền thông đa kênh, sáng tạo nội dung và phân tích dữ liệu, đồng thời đóng góp vào sự tăng trưởng của doanh nghiệp.</p>
-    </section>
-    
-    <section class="experience">
-      <h2>Kinh nghiệm làm việc</h2>
-      <!-- Bye Béo -->
-      <div class="item">
-        <h3>Nhân viên Media - Bye Béo</h3>
-        <p class="date">07/2024 – 05/2025</p>
-        <ul>
-          <li>Lên ý tưởng, sản xuất nội dung video & hình ảnh.</li>
-          <li>Quản lý kênh mạng xã hội, theo dõi hiệu quả campaign.</li>
-          <li>Phối hợp team Marketing triển khai quảng cáo online.</li>
-        </ul>
-      </div>
-      <!-- TDH Boxing Fitness Club -->
-      <div class="item">
-        <h3>Nhân viên dự án khai trương - TDH Boxing Fitness Club</h3>
-        <p class="date">04/2025 – 05/2025</p>
-        <ul>
-          <li>Hỗ trợ truyền thông & quảng bá sự kiện khai trương.</li>
-          <li>Sản xuất, phân phối nội dung marketing đa kênh.</li>
-          <li>Đo lường & báo cáo hiệu quả truyền thông.</li>
-        </ul>
-      </div>
-      <!-- Bệnh viện Mắt Tây Nguyên -->
-      <div class="item">
-        <h3>Nhân viên truyền thông - Bệnh viện Mắt Tây Nguyên</h3>
-        <p class="date">2023 – 2024</p>
-        <ul>
-          <li>Lên kế hoạch truyền thông online/offline.</li>
-          <li>Quản lý fanpage và nội dung mạng xã hội.</li>
-          <li>Tổ chức sự kiện nội bộ & chương trình khuyến mại.</li>
-          <li>Theo dõi dữ liệu & báo cáo hiệu quả chiến dịch.</li>
-        </ul>
-      </div>
-      <!-- COMBE & Media 47 & Cao Nguyên Tech -->
-      <div class="item">
-        <h3>Nhân viên truyền thông online & offline - COMBE</h3>
-        <p class="date">2021 – 2022</p>
-      </div>
-      <div class="item">
-        <h3>Nhân viên thiết kế 2D, 3D - Media 47</h3>
-        <p class="date">2021 – 2022</p>
-      </div>
-      <div class="item">
-        <h3>Nhân viên truyền thông online (Part-time) - Cao Nguyên Tech</h3>
-        <p class="date">2019 – Nay</p>
-        <ul>
-          <li>Viết bài, thiết kế hình ảnh, sản xuất nội dung truyền thông.</li>
-          <li>Quản lý các kênh mạng xã hội của công ty.</li>
-          <li>Theo dõi & báo cáo kết quả hoạt động truyền thông.</li>
-        </ul>
-      </div>
-    </section>
-    
-    <section class="skills">
-      <h2>Kỹ năng</h2>
+    <section>
+      <h2>Dự án & Sản phẩm</h2>
       <ul>
-        <li>Lên kế hoạch & triển khai chiến dịch Digital Marketing.</li>
-        <li>Sáng tạo nội dung đa kênh (bài viết, hình ảnh, video).</li>
-        <li>Quản lý & phát triển tài khoản mạng xã hội.</li>
-        <li>Sử dụng AI để phát triển nội dụng.</li>
-        <li>Theo dõi, phân tích & báo cáo dữ liệu marketing.</li>
-        <li>Làm việc nhóm & phối hợp đa phòng ban.</li>
-        <li>Thành thạo Photoshop & Canva.</li>
-        <li>Hiểu biết Facebook Ads & Google Ads.</li>
-      </ul>
-    </section>
-    
-    <section class="education">
-      <h2>Học vấn</h2>
-      <ul>
-        <li>2019: Cao đẳng FPT Tây Nguyên – Ứng dụng phần mềm</li>
-        <li>2022: Cao đẳng FPT Tây Nguyên – Thiết kế đồ họa</li>
-      </ul>
-    </section>
-    
-    <section class="awards">
-      <h2>Giải thưởng</h2>
-      <ul>
-        <li>Giải nhì ấn phẩm truyền thông – FPT Polytechnic Tây Nguyên (2021)</li>
-        <li>Giải nhì thiết kế logo kỷ niệm 15 năm – Đại học FPT (2021)</li>
-      </ul>
-    </section>
-
-    <section class="projects">
-      <h2>Một số Dự án & Sản phẩm đã thực hiện</h2>
-      <ul>
-        <li><strong>Nhận diện thương hiệu:</strong> <a href="https://drive.google.com/drive/folders/19EvFa91xAxV9MskqyXDjzYoHLjcyX3gB?usp=sharing" target="_blank">Xem trên Google Drive</a></li>
-        <li><strong>Fanpage Bệnh viện Mắt Tây Nguyên:</strong>
-          <ul>
-            <li><a href="https://www.facebook.com/bvmattaynguyen/posts/pfbid0poCgsvQWGH3HxoqYTNzg5XKGCSk9675xv4PB1V61RMV3hwHbKUpnTzLjMhebf6Kul" target="_blank">Bài viết 1</a></li>
-            <li><a href="https://www.facebook.com/bvmattaynguyen/videos/1151860759350180" target="_blank">Video 1</a></li>
-          </ul>
-        </li>
-        <li><strong>Fanpage Hoàng Boxing:</strong>
-          <ul>
-            <li><a href="https://www.facebook.com/hoangboxing/videos/1211745993698415" target="_blank">Video 1</a></li>
-            <li><a href="https://www.facebook.com/hoangboxing/posts/pfbid02SdoFoJGyvHHyb6iELoDPZLB6myQwWfqPu4zJy4WVk34NG8uJSpgfgSEsx9uRNkuAl" target="_blank">Bài viết 2</a></li>
-          </ul>
-        </li>
-        <li><strong>Fanpage COMBE Interior:</strong>
-          <ul>
-            <li><a href="https://www.facebook.com/combe.interior/posts/pfbid0kYw6euUindoU8rBv1wWEeKaFThnzpiMCX52AEg2cPpxMEUFg3QP4RTNawRFuCnfQl" target="_blank">Bài viết 1</a></li>
-            <li><a href="https://www.facebook.com/combe.interior/posts/pfbid02PHx3tKyvE4wMbhQBCdn5u64F5hJiFxpcWzCnaoJ3iq6EKqeVewAijXkNTMULzfHyl" target="_blank">Bài viết 2</a></li>
-          </ul>
-        </li>
-        <li><strong>TikTok:</strong>
-          <ul>
-            <li><a href="https://www.tiktok.com/@uncle.phan" target="_blank">@uncle.phan</a></li>
-            <li><a href="https://www.tiktok.com/@byeysl.chuanykhoa" target="_blank">@byeysl.chuanykhoa</a></li>
-            <li><a href="https://www.tiktok.com/@onland.tech" target="_blank">@onland.tech</a></li>
-          </ul>
-        </li>
+        <li><a href="https://drive.google.com/drive/folders/19EvFa91xAxV9MskqyXDjzYoHLjcyX3gB?usp=sharing">Nhận diện thương hiệu (Google Drive)</a></li>
+        <li><a href="https://www.facebook.com/bvmattaynguyen/posts/pfbid0poCgsvQWGH3HxoqYTNzg5XKGCSk9675xv4PB1V61RMV3hwHbKUpnTzLjMhebf6Kul">Bệnh viện Mắt Tây Nguyên (Post)</a></li>
+        <li><a href="https://www.facebook.com/hoangboxing/videos/1211745993698415">TDH Boxing Fitness Club (Video)</a></li>
+        <li><a href="https://www.facebook.com/combe.interior/posts/pfbid02PHx3tKyvE4wMbhQBCdn5u64F5hJiFxpcWzCnaoJ3iq6EKqeVewAijXkNTMULzfHyl">COMBE Interior (Post)</a></li>
+        <li><a href="https://www.tiktok.com/@uncle.phan">TikTok: Uncle Phan</a></li>
+        <li><a href="https://www.tiktok.com/@byeysl.chuanykhoa">TikTok: ByeYsl Chuyên Khoa</a></li>
+        <li><a href="https://www.tiktok.com/@onland.tech">TikTok: Onland Tech</a></li>
       </ul>
     </section>
   </div>
 </body>
 </html>
+
